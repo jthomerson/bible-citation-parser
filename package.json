@@ -26,6 +26,7 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
+    "coveralls": "2.13.0",
     "eslint": "3.19.0",
     "eslint-config-silvermine": "1.1.1",
     "expect.js": "0.3.1",
