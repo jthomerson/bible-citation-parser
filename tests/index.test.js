@@ -27,6 +27,18 @@ describe('bible-citation-parser', function() {
          ]);
       });
 
+      it('matches multi-line text correctly', function() {
+         runTest('Mt 1:1, 2-4\nMr 2:1\nRe 6:1\nPhm 1-3, 5, 7', [
+            { text: 'Mt 1:1', range: '40001001', start: 0, end: 5, book: _.findWhere(books, { number: 40 }) },
+            { text: '2-4', range: '40001002-40001004', start: 8, end: 10, book: _.findWhere(books, { number: 40 }) },
+            { text: 'Mr 2:1', range: '41002001', start: 12, end: 17, book: _.findWhere(books, { number: 41 }) },
+            { text: 'Re 6:1', range: '66006001', start: 19, end: 24, book: _.findWhere(books, { number: 66 }) },
+            { text: 'Phm 1-3', range: '57001001-57001003', start: 26, end: 32, book: _.findWhere(books, { number: 57 }) },
+            { text: '5', range: '57001005', start: 35, end: 35, book: _.findWhere(books, { number: 57 }) },
+            { text: '7', range: '57001007', start: 38, end: 38, book: _.findWhere(books, { number: 57 }) },
+         ]);
+      });
+
       it('matches multiple-chapter ranges correctly', function() {
          runTest('Read Mt 5-7, 9 and Re 1-3; 3Jo 1-3 for a test', [
             { text: 'Mt 5-7', range: '40005000-40007999', start: 5, end: 10, book: _.findWhere(books, { number: 40 }) },
