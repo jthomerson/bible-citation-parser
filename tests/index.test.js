@@ -20,10 +20,24 @@ describe('bible-citation-parser', function() {
          runTest(undefined, []);
       });
 
-      it('finds matches correctly', function() {
+      it('finds matches correctly - with abbreviated book names', function() {
          runTest('The Bible starts with Ge 1:1 and ends with Re 22:21', [
             { text: 'Ge 1:1', range: '1001001', start: 22, end: 27, book: _.findWhere(books, { number: 1 }) },
             { text: 'Re 22:21', range: '66022021', start: 43, end: 50, book: _.findWhere(books, { number: 66 }) },
+         ]);
+      });
+
+      it('finds matches correctly - with periods after the abbreviation', function() {
+         runTest('The Bible starts with Ge. 1:1 and ends with Re. 22:21', [
+            { text: 'Ge. 1:1', range: '1001001', start: 22, end: 28, book: _.findWhere(books, { number: 1 }) },
+            { text: 'Re. 22:21', range: '66022021', start: 44, end: 52, book: _.findWhere(books, { number: 66 }) },
+         ]);
+      });
+
+      it('finds matches correctly - with full book names', function() {
+         runTest('The Bible starts with Genesis 1:1 and ends with Revelation 22:21', [
+            { text: 'Genesis 1:1', range: '1001001', start: 22, end: 32, book: _.findWhere(books, { number: 1 }) },
+            { text: 'Revelation 22:21', range: '66022021', start: 48, end: 63, book: _.findWhere(books, { number: 66 }) },
          ]);
       });
 
