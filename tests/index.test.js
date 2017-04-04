@@ -34,6 +34,36 @@ describe('bible-citation-parser', function() {
             { text: 'Re 1-3', range: '66001000-66003999', start: 19, end: 24, book: _.findWhere(books, { number: 66 }) },
             { text: '3Jo 1-3', range: '64001001-64001003', start: 27, end: 33, book: _.findWhere(books, { number: 64 }) },
          ]);
+
+         runTest('Read Mt 5-7, 9, 21-24 and Re 1-3; 3Jo 1-3 for a test', [
+            { text: 'Mt 5-7', range: '40005000-40007999', start: 5, end: 10, book: _.findWhere(books, { number: 40 }) },
+            { text: '9', range: '40009000-40009999', start: 13, end: 13, book: _.findWhere(books, { number: 40 }) },
+            { text: '21-24', range: '40021000-40024999', start: 16, end: 20, book: _.findWhere(books, { number: 40 }) },
+            { text: 'Re 1-3', range: '66001000-66003999', start: 26, end: 31, book: _.findWhere(books, { number: 66 }) },
+            { text: '3Jo 1-3', range: '64001001-64001003', start: 34, end: 40, book: _.findWhere(books, { number: 64 }) },
+         ]);
+      });
+
+      it('matches verses in single-chapter books correctly', function() {
+         runTest('Test Philemon 2; Obadiah 1, 2, 3-5; 2Jo 1-3', [
+            { text: 'Philemon 2', range: '57001002', start: 5, end: 14, book: _.findWhere(books, { number: 57 }) },
+            { text: 'Obadiah 1', range: '31001001', start: 17, end: 25, book: _.findWhere(books, { number: 31 }) },
+            { text: '2', range: '31001002', start: 28, end: 28, book: _.findWhere(books, { number: 31 }) },
+            { text: '3-5', range: '31001003-31001005', start: 31, end: 33, book: _.findWhere(books, { number: 31 }) },
+            { text: '2Jo 1-3', range: '63001001-63001003', start: 36, end: 42, book: _.findWhere(books, { number: 63 }) },
+         ]);
+      });
+
+      it('rejects ch:vs citations for single chapter books', function() {
+         runTest('Test Philemon 2; Obadiah 1:2; 2:3; 4; 2Jo 1-3', [
+            { text: 'Philemon 2', range: '57001002', start: 5, end: 14, book: _.findWhere(books, { number: 57 }) },
+            { text: '2Jo 1-3', range: '63001001-63001003', start: 38, end: 44, book: _.findWhere(books, { number: 63 }) },
+         ]);
+
+         runTest('Test Philemon 2; Obadiah 1; 2:3; 4; 2Jo 1-3', [
+            { text: 'Philemon 2', range: '57001002', start: 5, end: 14, book: _.findWhere(books, { number: 57 }) },
+            { text: '2Jo 1-3', range: '63001001-63001003', start: 36, end: 42, book: _.findWhere(books, { number: 63 }) },
+         ]);
       });
 
    });

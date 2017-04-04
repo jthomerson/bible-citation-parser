@@ -118,7 +118,7 @@ module.exports = Class.extend({
                // The previous group was just a chapter reference (or a verse
                // reference for a single-chapter book), so this group is just
                // another one of the same.
-               group = [ group[1] ];
+               group = _.rest(group);
             } else if (startsWithSemiColon) {
                group = _.rest(group);
             }
