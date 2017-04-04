@@ -97,11 +97,13 @@ describe('bible-citation-parser', function() {
    describe('replaceCitations', function() {
 
       it('replaces basic strings correctly', function() {
-         var expected;
-
          expect(parser.replaceCitations('The Bible starts with Ge 1:1 and ends with Re 22:21'))
             .to
             .eql('The Bible starts with [Ge 1:1](bible://1001001) and ends with [Re 22:21](bible://66022021)');
+      });
+
+      it('replaces more complex strings correctly', function() {
+         var expected;
 
          expected = 'Test [Ge 1:1](bible://1001001), [2-4](bible://1001002-1001004), [7](bible://1001007);';
          expected = expected + ' [3Jo 1-3](bible://64001001-64001003), [4](bible://64001004);';
