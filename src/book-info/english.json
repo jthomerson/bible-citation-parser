@@ -21,7 +21,7 @@
    { "number": 20, "name": "Proverbs", "abbr": "Pr", "matches": [ "Pr", "Proverbs", "Prov", "Pro" ] },
    { "number": 21, "name": "Ecclesiastes", "abbr": "Ec", "matches": [ "Ec", "Ecclesiastes", "Eccl", "Ecc" ] },
    { "number": 22, "name": "Song of Solomon", "abbr": "Ca", "matches": [ "Ca", "Song of Solomon", "SoS", "Song of Sol" ] },
-   { "number": 23, "name": "Isaiah", "abbr": "Isa", "matches": [ "Isa", "Isaiah" ] },
+   { "number": 23, "name": "Isaiah", "abbr": "Isa", "matches": [ "Is", "Isa", "Isaiah" ] },
    { "number": 24, "name": "Jeremiah", "abbr": "Jer", "matches": [ "Jer", "Jeremiah", "Jere" ] },
    { "number": 25, "name": "Lamentations", "abbr": "La", "matches": [ "La", "Lamentations", "Lam" ] },
    { "number": 26, "name": "Ezekiel", "abbr": "Eze", "matches": [ "Eze", "Ezekiel", "Ezek" ] },
