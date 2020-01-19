@@ -3,17 +3,8 @@
 var _ = require('underscore'),
     util = require('util'),
     Class = require('class.extend'),
+    zeroPad = require('./utils/zero-pad'),
     CH_VS = '(?:[0-9]+:)?[0-9]+(?:\\s*[-,]\\s*[0-9]+)*(?:\\s*;\\s*(?:[0-9]+:)?[0-9]+(?:\\s*[-,]\\s*[0-9]+)*)*';
-
-function zpad(s) {
-   if (s.length === 1) {
-      return ('00' + s);
-   } else if (s.length === 2) {
-      return ('0' + s);
-   }
-
-   return s;
-}
 
 module.exports = Class.extend({
 
@@ -209,7 +200,7 @@ module.exports = Class.extend({
    },
 
    makeVerseID: function(bkNum, chNum, vsNum) {
-      return bkNum.toString() + zpad(chNum.toString()) + zpad(vsNum.toString());
+      return bkNum.toString() + zeroPad(chNum.toString()) + zeroPad(vsNum.toString());
    },
 
 });
