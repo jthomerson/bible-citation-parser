@@ -3191,11 +3191,11 @@ module.exports = {
             },
             {
                citation: '2Ki 14:24-28',
-               range: '32001000-32004999',
+               range: '12014024-12014028',
             },
             {
                citation: 'Jonah',
-               range: '12014024-12014028',
+               range: '32001000-32004999',
             },
             {
                citation: '2Ki 14:29',
