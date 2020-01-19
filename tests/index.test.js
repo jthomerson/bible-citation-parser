@@ -5,6 +5,10 @@ var _ = require('underscore'),
     expect = require('expect.js'),
     books = require('../src/book-info/english.json');
 
+// TODO: support (and test with) more types of dashes (besides just hyphen)
+// See the commit that these lines were added with to see an example of the problem
+// At minimum, emdash should be supported where it's correct to use it (multi-chap)
+
 describe('bible-citation-parser', function() {
    var parser = new BCP('english');
 

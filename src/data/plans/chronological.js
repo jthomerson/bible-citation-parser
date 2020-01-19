@@ -231,18 +231,18 @@ module.exports = {
       },
       {
          title: 'Day 17',
-         description: 'Ge 45:1-46:9; 1Ch 5:1–6; Ge 46:10–12; 1Ch 2:18-55',
+         description: 'Ge 45:1-46:9; 1Ch 5:1-6; Ge 46:10-12; 1Ch 2:18-55',
          ranges: [
             {
                citation: 'Ge 45:1-46:9',
                range: '1045001-1046009',
             },
             {
-               citation: '1Ch 5:1–6',
+               citation: '1Ch 5:1-6',
                range: '13005001-13005006',
             },
             {
-               citation: 'Ge 46:10–12',
+               citation: 'Ge 46:10-12',
                range: '1046010-1046012',
             },
             {
@@ -253,7 +253,7 @@ module.exports = {
       },
       {
          title: 'Day 18',
-         description: '1Ch 4:1-23; Ge 46:13; 1Ch 7:1-5; Ge 46:14-18; 1Ch 7:30–40; Ge 46:19-25; 1Ch 7:6-12; Ge 46:26-47:12',
+         description: '1Ch 4:1-23; Ge 46:13; 1Ch 7:1-5; Ge 46:14-18; 1Ch 7:30-40; Ge 46:19-25; 1Ch 7:6-12; Ge 46:26-47:12',
          ranges: [
             {
                citation: '1Ch 4:1-23',
@@ -272,7 +272,7 @@ module.exports = {
                range: '1046014-1046018',
             },
             {
-               citation: '1Ch 7:30–40',
+               citation: '1Ch 7:30-40',
                range: '13007030-13007040',
             },
             {
@@ -3155,10 +3155,10 @@ module.exports = {
       },
       {
          title: 'Day 177',
-         description: 'Am 2–5; Joel',
+         description: 'Am 2-5; Joel',
          ranges: [
             {
-               citation: 'Am 2–5',
+               citation: 'Am 2-5',
                range: '30002000-30005999',
             },
             {
@@ -3727,14 +3727,14 @@ module.exports = {
       },
       {
          title: 'Day 209',
-         description: 'Nahum; 2Ki 23:1–28; 2Ch 35:1-19',
+         description: 'Nahum; 2Ki 23:1-28; 2Ch 35:1-19',
          ranges: [
             {
                citation: 'Nahum',
                range: '34001000-34003999',
             },
             {
-               citation: '2Ki 23:1–28',
+               citation: '2Ki 23:1-28',
                range: '12023001-12023028',
             },
             {
