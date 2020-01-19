@@ -32,11 +32,11 @@ const allVerses = _.chain(allRanges)
 const includedVerses = [];
 
 console.log(plan.name);
-_.each(plan.entries, (entry) => {
-   console.log('DAY: ' + entry.citation);
-   console.log(entry.ranges);
-   _.each(entry.ranges.split(','), (range) => {
-      let [ start, end ] = range.split('-');
+_.each(plan.days, (day) => {
+   // console.log('DAY: ' + day.title);
+   // console.log(day.description);
+   _.each(day.ranges, (range) => {
+      let [ start, end ] = range.range.split('-');
 
       if (end === undefined) {
          end = start;
@@ -46,7 +46,7 @@ _.each(plan.entries, (entry) => {
       end = Number(end);
 
       if (end < start) {
-         throw new Error(`Invalid data - ends before starts: ${start}-${end}`);
+         throw new Error(`Invalid data - ends before starts: ${start}-${end} (${range.citation})`);
       }
 
       let startInd = _.sortedIndex(allVerses, start),
@@ -56,8 +56,8 @@ _.each(plan.entries, (entry) => {
          endInd = endInd - 1;
       }
 
-      console.log(`Start: ${start} = ${startInd} = ${allVerses[startInd]}`);
-      console.log(`End:   ${end} = ${endInd} = ${allVerses[endInd]}`);
+      // console.log(`Start: ${start} = ${startInd} = ${allVerses[startInd]}`);
+      // console.log(`End:   ${end} = ${endInd} = ${allVerses[endInd]}`);
 
       for (let i = startInd; i <= endInd && i < allVerses.length; i++) {
          includedVerses.push(allVerses[i]);
