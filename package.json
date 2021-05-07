@@ -23,7 +23,7 @@
    "homepage": "https://github.com/jthomerson/bible-citation-parser#readme",
    "dependencies": {
       "class.extend": "0.9.1",
-      "underscore": "1.9.2"
+      "underscore": "1.12.1"
    },
    "devDependencies": {
       "@silvermine/eslint-config": "2.3.0",
